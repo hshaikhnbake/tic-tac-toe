@@ -7,29 +7,36 @@
   <link rel="stylesheet" href="/styles/style.css">
   <title>Tic Tac Toe</title>
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akp-tech-challenge.netlify.app/">
+  <meta property="og:title" content="Tic Tac Toe">
+  <meta property="og:description" content="A Tic Tac Toe Tech Challenge">
+  <meta property="og:image" content="./assets/og.png" alt="A picture showing tic-tac-toe">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://akp-tech-challenge.netlify.app/">
+  <meta property="twitter:title" content="Tic Tac Toe">
+  <meta property="twitter:description"
+    content="Built a portfolio of projects using React.js, JavaScript, HTML5, CSS3 + SCSS, and Firebase.">
+  <meta property="twitter:image" content="./assets/og.png" alt="A picture showing tic-tac-toe">
+
 </head>
 
 
 <body>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: '238946841143683',
-        autoLogAppEvents: true,
-        xfbml: true,
-        version: 'v9.0'
-      });
-    };
-  </script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=238946841143683&autoLogAppEvents=1"
-    nonce="aRl36UOJ"></script>
   <div class="game-complete">
     <div class="winner"></div>
     <button class="reset">Reset</button>
-    <button class="share-facebook">Share Your Win on Facebook</buttons>
+    <a href="https://www.facebook.com/sharer.php?u=https://akp-tech-challenge.netlify.app/"><button
+        class="share-facebook">Share Your Win on
+        Facebook</button></a>
+    <a
+      href="https://twitter.com/share?url=https://akp-tech-challenge.netlify.app/&text=I won playing Tic-Tac-Toe. So Addicting! You have to try this&hashtags=winnerwinnerchickendinner"><button
+        class="share-Twitter">Share Your Win on
+        Twitter</button></a>
+
   </div>
 
   <div class="game-container">
