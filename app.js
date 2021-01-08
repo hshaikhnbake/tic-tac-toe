@@ -26,13 +26,7 @@ app.winConditions  = [
 ]
 app.gameWinner = $('.winner')
 
-app.handleFacebook = () => {
-  FB.ui({
-    display: 'popup',
-    method: 'share',
-    href: 'https://developers.facebook.com/docs/',
-  }, function (response) { });
-}
+$(document).ready(function () {
 
 app.handleReset = () => {
   app.currentPlayer = "X";
@@ -45,7 +39,6 @@ app.handleReset = () => {
   });
   $('.game-complete').removeClass('show')
 }
-
 
 app.checkWin = (playerMove) => {
   return app.winConditions.some((combination) => {
@@ -92,16 +85,15 @@ app.handleWin = (currentPlayer) => {
 }
 
 
-app.handleGameCellClick = e => {
+app.handleGameCellClick = (e) => {
   const cellIndex = $(app.gameCell).index(e.target)
   const cellClicked = e.target
   if (app.gameGrid[cellIndex] !=="") {
     alert('This space is already played. Choose another move')
-    return 
+    return
   } else {
     app.playerMove(cellIndex, cellClicked)
   }
-
 }
 
 app.playerMove = (cellIndex, cellClicked) => {
@@ -131,11 +123,5 @@ $(app.gameCell).each(function () {
 });
 
 $('.share-facebook').on('click', app.handleFacebook)
-
-app.init = function () {
-}
-
-
-$(document).ready(function () {
-  app.init();
+  
 }); 
