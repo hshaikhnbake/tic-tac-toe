@@ -1,26 +1,26 @@
 body {
   font-size: 62.5%;
   position: relative;
+  font-family: 'roboto';
+
+}
+
+header {
+  text-align: center;
 }
 
 .wrapper {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 button {
   border: none;
-  padding: 1rem 2rem;
-  margin: 15px 0 ;
   text-decoration: none;
-  background: grey;
-  color: #ffffff;
   cursor: pointer;
-  text-align: center;
-  border-radius: 4px;
-  transition: background 0.2s linear;
 }
 
-button:hover {
-  background: salmon;
+button:hover,
+button:focus{
+  background: rgba(250, 128, 114, 0.2);
 }

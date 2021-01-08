@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <title>Tic Tac Toe</title>
 
   <!-- Open Graph / Facebook -->
@@ -28,13 +30,13 @@
 <body>
   <div class="game-complete">
     <div class="winner"></div>
-    <button class="reset">Reset</button>
+    <button class="game-complete-button reset">Reset</button>
     <a href="https://www.facebook.com/sharer.php?u=https://akp-tech-challenge.netlify.app/"><button
-        class="share-facebook">Share Your Win on
+        class="game-complete-button share-facebook">Share Your Win on
         Facebook</button></a>
     <a
       href="https://twitter.com/share?url=https://akp-tech-challenge.netlify.app/&text=I won playing Tic-Tac-Toe. So Addicting! You have to try this&hashtags=winnerwinnerchickendinner"><button
-        class="share-Twitter">Share Your Win on
+        class="game-complete-button share-Twitter">Share Your Win on
         Twitter</button></a>
 
   </div>
@@ -42,20 +44,24 @@
   <div class="game-container">
     <div class="wrapper">
       <div class="game">
+        <header>
+          <h1>Tic-Tac-Toe!</h1>
+        </header>
         <div class="hud">
           <div class="player"></div>
+          <button class="random-mode">Random Mode</button>
         </div>
 
         <div class="game-grid">
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
-          <div class="game-cell"></div>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
+          <button aria-pressed="false" class="game-cell"></button>
         </div>
       </div>
     </div>
