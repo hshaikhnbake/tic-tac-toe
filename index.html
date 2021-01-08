@@ -6,25 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/style.css">
   <title>Tic Tac Toe</title>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '238946841143683',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v9.0'
+      });
+    };
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 
+
 <body>
-  <header>
-    <h1>Tic Tac Toe</h1>
-  </header>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=238946841143683&autoLogAppEvents=1"
+    nonce="aRl36UOJ"></script>
+  <div class="game-complete">
+    <div class="winner"></div>
+    <button class="reset">Reset</button>
+    <button class="share-facebook">Share Your Win on Facebook</buttons>
+  </div>
 
   <div class="game-container">
     <div class="wrapper">
       <div class="game">
         <div class="hud">
-          <div class="player">Blue's Turn</div>
-          <button class="reset">Reset</button>
+          <div class="player"></div>
         </div>
 
         <div class="game-grid">
           <div class="game-cell"></div>
           <div class="game-cell"></div>
-          <div class="game-cell "></div>
+          <div class="game-cell"></div>
           <div class="game-cell"></div>
           <div class="game-cell"></div>
           <div class="game-cell"></div>
@@ -32,8 +50,12 @@
           <div class="game-cell"></div>
           <div class="game-cell"></div>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="app.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

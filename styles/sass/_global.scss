@@ -1,5 +1,6 @@
 body {
   font-size: 62.5%;
+  position: relative;
 }
 
 .wrapper {
@@ -10,7 +11,7 @@ body {
 button {
   border: none;
   padding: 1rem 2rem;
-  margin: 0;
+  margin: 15px 0 ;
   text-decoration: none;
   background: grey;
   color: #ffffff;
