@@ -1,4 +1,4 @@
-body {
-  background-color: blue;
-  height: 100v
-}
+@import 'normalize';
+@import 'global';
+@import 'game';
+@import 'share';

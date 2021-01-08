@@ -1,0 +1,70 @@
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  background: skyblue;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0
+}
+
+.game-grid {
+  background: grey;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  justify-items: center;
+  align-items: center;
+}
+
+.game-cell {
+  height: 200px;
+  width: 200px;
+  background: skyblue;
+}
+
+.highlight:focus,
+.highlight:hover {
+  background: rgba(245, 245, 245, 0.2)
+}
+
+.game-cell.X {
+  background-image: url('/assets/X.svg');
+  cursor: not-allowed;
+}
+
+.game-cell.O {
+  background-image: url('/assets/O.svg');
+  cursor: not-allowed;
+}
+
+.game-complete {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+  color: white;
+  font-size: 2rem;
+}
+.game-complete.show{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
