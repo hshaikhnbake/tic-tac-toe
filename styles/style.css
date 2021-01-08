@@ -205,29 +205,27 @@ template {
 body {
   font-size: 62.5%;
   position: relative;
+  font-family: 'roboto';
+}
+
+header {
+  text-align: center;
 }
 
 .wrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 button {
   border: none;
-  padding: 1rem 2rem;
-  margin: 15px 0;
   text-decoration: none;
-  background: grey;
-  color: #ffffff;
   cursor: pointer;
-  text-align: center;
-  border-radius: 4px;
-  -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
 }
 
-button:hover {
-  background: salmon;
+button:hover,
+button:focus {
+  background: rgba(250, 128, 114, 0.2);
 }
 
 .game-container {
@@ -240,6 +238,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 .game {
@@ -289,11 +288,13 @@ button:hover {
 
 .game-cell.X {
   background-image: url("/assets/X.svg");
+  background-size: contain;
   cursor: not-allowed;
 }
 
 .game-cell.O {
   background-image: url("/assets/O.svg");
+  background-size: contain;
   cursor: not-allowed;
 }
 
@@ -322,6 +323,42 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+button.game-complete-button {
+  margin: 15px;
+}
+
+button.game-complete-button {
+  margin: 15px;
+}
+
+button.game-complete-button:focus,
+button.game-complete-button:hover {
+  background: teal;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .game-grid {
+    grid-gap: 10px;
+  }
+  .game-cell {
+    height: 150px;
+    width: 150px;
+    background: skyblue;
+  }
+}
+
+@media (max-width: 540px) {
+  .game-grid {
+    grid-gap: 5px;
+  }
+  .game-cell {
+    height: 100px;
+    width: 100px;
+    background: skyblue;
+  }
 }
 
 .resp-sharing-button__link,

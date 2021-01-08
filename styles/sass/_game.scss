@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh
 }
 
 .game {
@@ -41,11 +42,13 @@
 
 .game-cell.X {
   background-image: url('/assets/X.svg');
+  background-size: contain;
   cursor: not-allowed;
 }
 
 .game-cell.O {
   background-image: url('/assets/O.svg');
+  background-size: contain;
   cursor: not-allowed;
 }
 
@@ -66,5 +69,41 @@
   flex-direction: column;
 }
 
+button.game-complete-button {
+  margin: 15px;
+}
+
+button.game-complete-button {
+  margin: 15px;
+}
+
+button.game-complete-button:focus,
+button.game-complete-button:hover {
+  background: rgb(0, 128, 128);
+  color: white;
+}
 
 
+@media (max-width: 768px) {
+.game-grid {
+  grid-gap: 10px;
+}
+
+  .game-cell {
+  height: 150px;
+  width: 150px;
+  background: skyblue;
+}
+}
+
+@media (max-width: 540px) {
+.game-grid {
+  grid-gap: 5px;
+}
+
+  .game-cell {
+  height: 100px;
+  width: 100px;
+  background: skyblue;
+}
+}
